@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Refresher</title>
+</head>
+<body>
+    <h1 id="heading1" class="Main-Heading">
+        I'm learning JS
+    </h1>
+
+    <script>
+        // JavaScript code here
+        var a = 19;
+        let b = 20;
+        const c = "This is a string";
+        var d = true;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+
+        // data types :- 
+        // Numbers :- real number
+        // Object :- key-value pairs
+        // String :- set of characters
+        // Undefined
+        // Boolean :- true/false
+        // Null
+
+
+        // function
+        function sum(a ,b) {
+            return a + b;
+        }
+        var sumOfTwoNumber = sum(19 , 20);
+        console.log(sumOfTwoNumber);
+
+
+        // object
+        let obj1 = {
+            name : "Kushagra",
+            age : 20,
+            gender : "Male",
+            func1 : function myFunc(number) {
+                console.log("The number is " + number + "(using simple function)")
+            },
+            func2 : myFunc2 = (number) => {
+                console.log("The number is " + number + "(using arrow function)")
+            }
+        }
+        console.log(obj1);
+        console.log(obj1.name);
+        console.log(obj1["name"]);
+        console.log(obj1.age);
+        console.log(obj1.gender);
+        console.log(obj1.func1(12200727));
+        console.log(obj1.func2(12200727));
+
+
+
+        // add event listener
+        let h1 = document.querySelector(".Main-Heading");
+        h1.addEventListener("click" , function() {
+            alert("Clicked on h1 tag");
+            let conf = confirm("Are you sure?");
+            console.log(conf);
+        });
+
+
+
+        // strings methods we can search on google (lots of methods are there)
+
+
+        // arrays
+        let arr = new Array(10,20,"Kushagra" , true , 8.79);
+        console.log(arr);
+        console.log(arr[0]);
+        console.log(arr.length);
+
+
+
+        // callback functions
+        // inside the settimeout, there is a callback function
+        setTimeout(() => {
+            console.log("it is printed after 5 seconds");
+        } , 5000);
+        console.log("Mai neeche wali script hoon settimeout ki...");
+
+
+
+        // promises
+        // The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+        // .then() and .catch()
+
+
+
+    </script>
+</body>
+</html>
