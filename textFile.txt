@@ -1,1 +1,9 @@
-This is the rough text file.
+ -> IMP things about react app will be here...
+
+-> npx is nothing but we use it when we don't want to install create-react-app only we want to use it.
+-> react is js library/framework
+-> how to create react app :- npx create-react-app "react_app_name"
+-> index.js is the entry point of our project
+-> we will do editing in app.js and automatiaclly changes will reflect in index.js
+-> PROPS :- Props are used to pass data from a parent component to its child components. They act like function parameters, allowing you to customize the behavior and appearance of components.
+-> STATES :- State is used to manage data that is internal to a component. This data can change over time, causing the component to re-render.
