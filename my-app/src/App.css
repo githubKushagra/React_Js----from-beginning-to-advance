@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.myImage {
+  max-width: 100%;
+  height: auto; /* Keeps the aspect ratio */
+  object-fit: cover; /* Crop to fit */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+  /* below both line is used to align image at center */
+  display: block;
+  margin: 0 auto;
+
+  /* float: right; */
+  /*filter: grayscale(100%);*/  /*Black and white image*/
+  opacity: 0.9; /* 90% opacity (transparency */
+}
+
+.myImage:hover {
+  transform: scale(1.1); /* Slightly enlarges the image */
+  transition: transform 0.3s ease; /* Smooth transition */
+}

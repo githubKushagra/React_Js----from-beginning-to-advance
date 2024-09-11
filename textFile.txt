@@ -7,3 +7,7 @@
 -> we will do editing in app.js and automatiaclly changes will reflect in index.js
 -> PROPS :- Props are used to pass data from a parent component to its child components. They act like function parameters, allowing you to customize the behavior and appearance of components.
 -> STATES :- State is used to manage data that is internal to a component. This data can change over time, causing the component to re-render.
+
+-> react prefer camel case language means first letter will be in lower case and the first letter of the every other words will be uppercase letter
+-> JSX :- JSX is a syntax extension for JavaScript. It allows you to write HTML in your JavaScript
+-> '<>' and '</>' are the jsx fragments or we can also write <React.Fragment> </React.Fragment>
