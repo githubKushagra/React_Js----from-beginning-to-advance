@@ -12,7 +12,7 @@ function App() {
     In ReactJS, the props are a type of object where the value of attributes of a tag is stored. The word “props” implies “properties”
     Props allow you to customize and configure child components based on data from the parent. This makes components reusable and flexible. */}
         <Navbar title="TextUtils" homePage="Home" aboutPage="About TextUtils" />
-        <div className="container">
+        <div className="container my-3">
           <TextFile heading="Enter your text below"/>
         </div>
     </>
