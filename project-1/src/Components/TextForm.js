@@ -96,6 +96,20 @@ export default function TextForm(props) {
     }
 
 
+    const handleOnCopy = () => {
+        var content = document.getElementById("my-box");
+        content.select();                                   // This method selects all the text within the element (likely a text input or textarea) so that it is highlighted and ready to be copied.
+        navigator.clipboard.writeText(content.value);       // This uses the Clipboard API's writeText method to copy the selected text to the clipboard. content.value retrieves the text content from the element, and writeText copies that content to the clipboard.
+    }
+
+
+
+    const handleOnRemoveExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);   // spliting into array
+        setText(newText.join(" "));         // joining splitted array in to a string
+    }
+
+
     
     // this is the state and here text is the state
     // text is storing the value of textarea
@@ -119,6 +133,8 @@ export default function TextForm(props) {
                 <button className="btn btn-primary ms-2" onClick={handleOnSpeakResume}>Speak Resume</button>
                 <button className="btn btn-primary ms-2" onClick={handleOnStopSpeak}>Stop Speak</button>
                 <button className="btn btn-primary ms-2" onClick={handleOnReverseTheText}>Reverse the Text</button>
+                <button className="btn btn-primary ms-2" onClick={handleOnCopy}>Copy Text</button>
+                <button className="btn btn-primary mt-3" onClick={handleOnRemoveExtraSpaces}>Remove Extra Spaces</button>
             </div>
 
 
