@@ -121,7 +121,10 @@ export default function TextForm(props) {
         <>
             <h2>{props.heading}</h2>
             <div className="mb-2">
-                <textarea className="form-control" id="my-box" value={text} onChange={handleOnChange} rows="8"></textarea>
+                <textarea className="form-control" id="my-box" value={text} onChange={handleOnChange} rows="8" style={{
+                    backgroundColor : (props.mode === 'light' ? 'white' : 'black'),
+                    color : props.mode === 'light' ? 'black' : 'white',
+                }} ></textarea>
             </div>
 
             <div>
@@ -149,7 +152,7 @@ export default function TextForm(props) {
                 </p>
                 <h2>Preview</h2>
                 <p style={{ textAlign: 'justify' }}>
-                    {text}
+                    {text.length > 0 ? text : 'Enter something in the textBox above to preview here...'}
                 </p>
             </div>
         </>
