@@ -6,7 +6,7 @@ import Navbar from './Components/Navbar';
 import Alert from './Components/Alert';
 import TextFile from './Components/TextForm';
 // import AboutUs from './Components/About';
-import { useState , useEffect } from 'react';
+import { useState } from 'react';
 
 
 
@@ -27,7 +27,7 @@ function App() {
     // Auto-hide the alert after 3 seconds
     setTimeout(() => {
       setAlert(null);
-    }, 4000);
+    }, 2000);
   }
 
   
@@ -38,20 +38,16 @@ function App() {
         document.body.style.backgroundColor = '#282828';
         document.body.style.color = 'white';
         setTheAlertMessage("Dark mode has been Enabled" , "success");
+        document.title = "TextUtils - Dark Mode";    // document.title indecate the title that we can see on tab bar on chrome
     }
     else {
         setMode('light');
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
         setTheAlertMessage("Light mode has been Enabled" , "success");
+        document.title = "TextUtils - Light Mode";
     }
   }
-
-
-  // Effect to display the default welcome alert when the app loads
-  useEffect(() => {
-    setTheAlertMessage("Welcome to TextUtils! Start modifying your text using the tools below.", "info");
-  }, []);  // The empty array means this will run only once when the component mounts
 
 
 

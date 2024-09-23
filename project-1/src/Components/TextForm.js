@@ -13,7 +13,7 @@ export default function TextForm(props) {
         console.log("On Click...");
         const newText = text.toUpperCase();
         setText(newText);
-        props.showAlert("UpperCase Button has been Clicked" , "success");
+        props.showAlert("changed to uppercase" , "success");
     }
 
 
@@ -21,14 +21,14 @@ export default function TextForm(props) {
         console.log("On Click...");
         const newText = text.toLowerCase();
         setText(newText);
-        props.showAlert("LowerCase Button has been Clicked" , "success");
+        props.showAlert("changed to lowercase" , "success");
     }
 
 
     const handleOnClearText = () => {
         console.log("On Click...");
         setText("");
-        props.showAlert("Clear text Button has been Clicked" , "success");
+        props.showAlert("text has deleted" , "success");
     }
 
 
@@ -57,7 +57,7 @@ export default function TextForm(props) {
         // The speechSynthesis.speak() method is part of the Web Speech API, and it starts the process of converting the text into spoken words.
         window.speechSynthesis.speak(msg);
 
-        props.showAlert("Speak Button has been Clicked" , "success");
+        props.showAlert("speaker has initiated" , "success");
     }
 
 
@@ -67,7 +67,7 @@ export default function TextForm(props) {
 
         // to stopped the speech
         window.speechSynthesis.pause();
-        props.showAlert("Speak Pause Button has been Clicked" , "success");
+        props.showAlert("speak has paused" , "success");
     }
 
 
@@ -77,7 +77,7 @@ export default function TextForm(props) {
 
         // to resume the speech that we have stoped
         window.speechSynthesis.resume();
-        props.showAlert("Speak Resume Button has been Clicked" , "success");
+        props.showAlert("resume the speak" , "success");
     }
 
 
@@ -87,7 +87,7 @@ export default function TextForm(props) {
 
         // to cancel the speech
         window.speechSynthesis.cancel();
-        props.showAlert("Stop Speak Button has been Clicked" , "success");
+        props.showAlert("stoped the speaker" , "success");
     }
 
 
@@ -100,7 +100,7 @@ export default function TextForm(props) {
             newReversedText += text[i];
         }
         setText(newReversedText);
-        props.showAlert("Reverse Text Button has been Clicked" , "success");
+        props.showAlert("text has reversed" , "success");
     }
 
 
@@ -108,7 +108,7 @@ export default function TextForm(props) {
         var content = document.getElementById("my-box");
         content.select();                                   // This method selects all the text within the element (likely a text input or textarea) so that it is highlighted and ready to be copied.
         navigator.clipboard.writeText(content.value);       // This uses the Clipboard API's writeText method to copy the selected text to the clipboard. content.value retrieves the text content from the element, and writeText copies that content to the clipboard.
-        props.showAlert("Copy Text Button has been Clicked" , "success");
+        props.showAlert("text copied to clipboard" , "success");
     }
 
 
@@ -116,7 +116,7 @@ export default function TextForm(props) {
     const handleOnRemoveExtraSpaces = () => {
         let newText = text.split(/[ ]+/);   // spliting into array
         setText(newText.join(" "));         // joining splitted array in to a string
-        props.showAlert("Remove Extra Spaces Button has been Clicked" , "success");
+        props.showAlert("extra spaces has removed" , "success");
     }
 
 
